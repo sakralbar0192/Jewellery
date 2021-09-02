@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,85 @@
   <title>Jewellery</title>
 </head>
 <body>
-<h1>Приуэт!</h1>
+<header class="page-header">
+  <header class="page-header__header">
+    <div class="page-header__logo">
+      <picture>
+        <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+        <!-- 1х: 66px; 2x: 132px -->
+        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Логотип" width="66" height="66" loading="lazy">
+      </picture>
+    </div>
+    <div class="page-header__nav-wrapper burger-menu">
+      <button class="burger-menu__burger-toggle">
+        <span>Open menu</span>
+        <span>Close menu</span>
+      </button>
+      <div class="page-header__search-field-wrapper">
+        <label>
+          <input type="text" placeholder="Type here to search">
+        </label>
+      </div>
+      <nav class="page-header__user-nav-wrapper">
+        <div class="page-header__login-button">
+          <a href="login.html">
+            Login
+          </a>
+        </div>
+        <div class="page-header__cart">
+          <a href="#">
+            <span>Cart</span>
+          </a>
+        </div>
+      </nav>
+      <nav class="page-header__site-nav-wrapper">
+        <ul class="page-header__site-nav-list">
+          <li>
+            <a href="#">What’s new</a>
+          </li>
+          <li>
+            <a href="#">Chokers</a>
+          </li>
+          <li>
+            <a href="#">Necklaces</a>
+          </li>
+          <li>
+            <a href="#">Rings</a>
+          </li>
+          <li>
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="page-header__additional-nav-wrapper">
+        <ul class="page-header__additional-nav-list">
+          <li>
+            <a href="#">About CH</a>
+          </li>
+          <li>
+            <a href="#">Stores & Hours/a>
+          </a></li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="page-header__image-block">
+    <div class="page-header__image-wrapper">
+      <picture>
+        <source type="image/webp" srcset="img/main.webp 1x, img/main@2x.webp 2x">
+        <!-- 1х: 1366px; 2x: 2732px -->
+        <img src="img/main.jpg" srcset="img/main@2x.jpg 2x" alt="Jewellery" width="1366" height="463" loading="lazy">
+      </picture>
+    </div>
+    <p>
+      Perfection
+      <span>made to be yours</span>
+    </p>
+
+  </div>
+</header>
 </body>
 </html>
