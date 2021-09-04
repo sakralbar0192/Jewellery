@@ -5,41 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jewellery">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Jewellery</title>
 </head>
 <body>
-<header class="page-header">
-  <header class="page-header__header">
-    <div class="page-header__logo">
-      <picture>
-        <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
-        <!-- 1х: 66px; 2x: 132px -->
-        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Логотип" width="66" height="66" loading="lazy">
-      </picture>
+<header class="page-header main-container">
+  <header class="page-header__header burger-menu">
+    <div class="page-header__logo burger-menu__logo">
+      <a>
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
     </div>
-    <div class="page-header__nav-wrapper burger-menu">
-      <button class="burger-menu__burger-toggle">
+    <div class="page-header__nav-wrapper burger-menu__menu-wrapper">
+      <button class="page-header__burger burger-menu__toggle">
         <span>Open menu</span>
         <span>Close menu</span>
       </button>
-      <div class="page-header__search-field-wrapper">
-        <label>
-          <input type="text" placeholder="Type here to search">
-        </label>
+      <div class="page-header__search-field-wrapper burger-menu__block">
+        <input type="text" placeholder="Type here to search" id="search-field">
+        <label for="search-field" class="visually-hidden">Введите поисковый запрос</label>
+        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
+
       </div>
       <nav class="page-header__user-nav-wrapper">
-        <div class="page-header__login-button">
+        <div class="page-header__login-button burger-menu__block">
           <a href="login.html">
             Login
           </a>
         </div>
-        <div class="page-header__cart">
+        <div class="page-header__cart burger-menu__cart">
           <a href="#">
             <span>Cart</span>
+            <span>0</span>
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
           </a>
         </div>
       </nav>
-      <nav class="page-header__site-nav-wrapper">
+      <nav class="page-header__site-nav-wrapper burger-menu__block">
         <ul class="page-header__site-nav-list">
           <li>
             <a href="#">What’s new</a>
@@ -58,13 +66,13 @@
           </li>
         </ul>
       </nav>
-      <nav class="page-header__additional-nav-wrapper">
+      <nav class="page-header__additional-nav-wrapper burger-menu__block">
         <ul class="page-header__additional-nav-list">
           <li>
             <a href="#">About CH</a>
           </li>
           <li>
-            <a href="#">Stores & Hours/a>
+            <a href="#">Stores & Hours</a>
           </li>
           <li>
             <a href="#">Contact Us</a>
@@ -81,12 +89,15 @@
         <img src="img/main.jpg" srcset="img/main@2x.jpg 2x" alt="Jewellery" width="1366" height="463" loading="lazy">
       </picture>
     </div>
-    <p>
-      Perfection
+    <div class="page-header__image-block-text">
+      <p>Perfection</p>
       <span>made to be yours</span>
-    </p>
-
+    </div>
   </div>
 </header>
+<footer class="page-footer">
+  Футер
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
