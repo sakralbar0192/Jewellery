@@ -1,0 +1,35 @@
+.page-footer {
+  padding: 100px;
+  background: $additional-color-two;
+}
+
+.page-footer__wrapper {
+  display: flex;
+}
+
+.page-footer__form {
+  width: 50%;
+}
+
+.page-footer__links-block {
+  width: 50%;
+}
+
+@media (max-width: $desktop-width) {
+  .page-footer {
+    padding: 60px 45px;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: column;
+  }
+
+  .page-footer__form {
+    width: auto;
+    margin: 0 0 20px;
+  }
+
+  .page-footer__links-block {
+    width: auto;
+  }
+}

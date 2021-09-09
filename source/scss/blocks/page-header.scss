@@ -1,3 +1,7 @@
+.page-header {
+  margin: 0 0 120px;
+}
+
 .page-header__header {
   position: relative;
   padding: 30px 100px 0;
@@ -127,6 +131,8 @@
 
 .page-header__image-block {
   position: relative;
+  max-width: 1366px;
+  margin: auto;
 }
 
 .page-header__image-block-text {
@@ -171,6 +177,10 @@
 }
 
 @media (max-width: $desktop-width) {
+  .page-header {
+    margin: 0 0 70px;
+  }
+
   .page-header__header {
     padding: 30px 45px 50px;
     background: $accent-color;
@@ -340,6 +350,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .page-header {
+    margin: 0 0 60px;
+  }
+
   .page-header__header {
     padding: 20px 15px 25px;
   }

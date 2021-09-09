@@ -1,0 +1,38 @@
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin: 0 0 25px;
+    font-family: "Cormorant Garamond";
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 44px;
+    color: $primary-color;
+  }
+
+  a {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-decoration: underline;
+    text-decoration-color: $accent-color;
+    color: $primary-color;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .section__title {
+    span {
+      margin: 0 0 12px;
+    }
+
+    a {
+      padding: 5px 0;
+      border-bottom: 1px solid $accent-color;
+      text-decoration: none;
+    }
+  }
+}

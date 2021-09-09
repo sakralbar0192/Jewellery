@@ -1,0 +1,45 @@
+.links-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-block__list {
+  @include resetListDefaultProperties;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px 0 0;
+
+  a {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    color: $secondary-color;
+  }
+
+  svg {
+    fill: $secondary-color;
+    margin: 0 15px 0 0;
+  }
+
+  &--social {
+    padding: 0 0 0 20px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .links-block {
+    flex-direction: column;
+  }
+
+  .links-block__list {
+    &--social {
+      flex-direction: row;
+      span {
+        @include visually-hidden;
+      }
+    }
+  }
+
+}
