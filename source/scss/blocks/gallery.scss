@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 97px;
   padding: 0 0 20px;
 }
 
@@ -71,6 +71,7 @@
 
 .gallery__button-prev,
 .gallery__button-next {
+  @include resetButtonDefaultProperties;
   position: absolute;
   top: 15px;
   display: flex;
@@ -126,18 +127,12 @@
   }
 
 @media (max-width: $desktop-width) {
+  .gallery {
+    margin: 0 0 50px;
+  }
+
   .gallery__title {
     margin: 0 0 50px;
-
-    span {
-      margin: 0 0 12px;
-    }
-
-    a {
-      padding: 5px 0;
-      border-bottom: 1px solid $accent-color;
-      text-decoration: none;
-    }
   }
 
   .gallery__wrapper {
@@ -165,6 +160,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .gallery {
+    margin: 0 0 40px;
+  }
+
   .gallery__title {
     margin: 0 0 40px;
   }

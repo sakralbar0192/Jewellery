@@ -1,0 +1,153 @@
+.blog {
+}
+
+.blog__title {
+  margin: 0 0 48px;
+}
+
+.blog__wrapper {
+  @include resetListDefaultProperties;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog__inner-wrapper {
+  @include resetListDefaultProperties;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__article {
+  display: flex;
+  margin: 15px;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.blog__image-wrapper {
+  img {
+    width: 285px;
+    height: 300px;
+  }
+}
+
+.blog__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 285px;
+  height: 300px;
+  padding: 70px 60px;
+  background: $additional-color-three;
+
+  span {
+    margin: 0 0 10px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $accent-color;
+  }
+
+  h3 {
+    margin: 0 0 38px;
+    font-family: Cormorant Garamond;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: center;
+    color: $additional-color-two;
+  }
+
+  a {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-decoration: none;
+    color: $primary-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+@media (min-width: $desktop-only) {
+  .blog__article {
+    position: relative;
+
+    &--big {
+      width: 570px;
+      height: 630px;
+
+      .blog__image-wrapper {
+        img {
+          width: 570px;
+          height: 630px;
+        }
+      }
+
+      .blog__description {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .blog__title {
+    margin: 0 0 36px;
+  }
+
+  .blog__article {
+    margin: 25px;
+  }
+
+  .blog__image-wrapper {
+    img {
+      width: 339px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .blog__description {
+    width: 339px;
+    height: 300px;
+    padding: 67px 85px 30px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .blog__title {
+    margin: 0 0 30px;
+  }
+
+  .blog__article {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .blog__image-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    img {
+      width: 290px;
+      height: 256px;
+    }
+  }
+
+  .blog__description {
+    justify-content: center;
+    width: 290px;
+    height: 256px;
+    padding: 40px 60px 45px;
+  }
+}

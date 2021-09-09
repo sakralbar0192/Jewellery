@@ -261,18 +261,18 @@
       </li>
     </ul>
     <div class="gallery__navigation">
-      <div class="gallery__button-prev" id="button-prev">
+      <button class="gallery__button-prev" id="button-prev">
         <span class="visually-hidden">Назад</span>
         <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
         </svg>
-      </div>
-      <div class="gallery__button-next" id="button-next">
+      </button>
+      <button class="gallery__button-next" id="button-next">
         <span class="visually-hidden">Вперед</span>
         <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
         </svg>
-      </div>
+      </button>
     </div>
     <div class="gallery__pagination" id="pagination"></div>
   </section>
@@ -280,51 +280,55 @@
     <h2 class="blog__title section-title">
       <span>Blog</span>
       <a href="#">Read All</a>
-      <ul class="blog__wrapper">
-        <li class="blog__article">
-          <div class="blog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.webp 1x, img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.webp 2x">
-              <!-- 1х: px; 2x: px -->
-              <img src="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.jpg" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.jpg 2x" alt="article-one" width="285" height="300" loading="lazy">
-            </picture>
-          </div>
-          <div class="blog__description">
-            <span>September 30, 2019</span>
-            <h3>How to care for your jewellery</h3>
-            <a href="#">Read Article</a>
-          </div>
-        </li>
-        <li class="blog__article">
-          <div class="blog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/jalex-holyoake-Cg0dPdmy5dE-unsplash.webp 1x, img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.webp 2x">
-              <!-- 1х: px; 2x: px -->
-              <img src="img/alex-holyoake-Cg0dPdmy5dE-unsplash.jpg" srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.jpg 2x" alt="article-two" width="285" height="300" loading="lazy">
-            </picture>
-          </div>
-          <div class="blog__description">
-            <span>September 29, 2019</span>
-            <h3>Power of crystals</h3>
-            <a href="#">Read Article</a>
-          </div>
-        </li>
-        <li class="blog__article">
-          <div class="blog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash.webp 1x, img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.webp 2x">
-              <!-- 1х: px; 2x: px -->
-              <img src="img/alve-odonnell-RP4_f4zu_8A-unsplash.jpg" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.jpg 2x" alt="article-three" width="285" height="300" loading="lazy">
-            </picture>
-          </div>
-          <div class="blog__description">
-            <span>September 16, 2019</span>
-            <h3>AW 19 trends</h3>
-            <a href="#">Read Article</a>
-          </div>
-        </li>
-      </ul>
     </h2>
+    <ul class="blog__wrapper">
+      <li>
+        <ul class="blog__inner-wrapper">
+          <li class="blog__article">
+            <div class="blog__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.webp 1x, img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.webp 2x">
+                <!-- 1х: px; 2x: px -->
+                <img src="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.jpg" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.jpg 2x" alt="article-one" width="285" height="300" loading="lazy">
+              </picture>
+            </div>
+            <div class="blog__description">
+              <span>September 30, 2019</span>
+              <h3>How to care for your jewellery</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__article blog__article--reverse">
+            <div class="blog__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash.webp 1x, img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.webp 2x">
+                <!-- 1х: px; 2x: px -->
+                <img src="img/alex-holyoake-Cg0dPdmy5dE-unsplash.jpg" srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.jpg 2x" alt="article-two" width="285" height="300" loading="lazy">
+              </picture>
+            </div>
+            <div class="blog__description">
+              <span>September 29, 2019</span>
+              <h3>Power of crystals</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="blog__article blog__article--big">
+        <div class="blog__image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash.webp 1x, img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.webp 2x">
+            <!-- 1х: px; 2x: px -->
+            <img src="img/alve-odonnell-RP4_f4zu_8A-unsplash.jpg" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.jpg 2x" alt="article-three" width="285" height="300" loading="lazy">
+          </picture>
+        </div>
+        <div class="blog__description">
+          <span>September 16, 2019</span>
+          <h3>AW 19 trends</h3>
+          <a href="#">Read Article</a>
+        </div>
+      </li>
+    </ul>
   </section>
 </main>
 <footer class="page-footer">
