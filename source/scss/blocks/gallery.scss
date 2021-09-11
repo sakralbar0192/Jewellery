@@ -1,191 +1,135 @@
 .gallery {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto 97px;
-  padding: 0 0 20px;
+  margin: 0 0 114px;
 }
 
 .gallery__title {
-  margin: 0 0 60px;
+  margin: 0 0 50px;
+
+  &>span {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    span {
+      margin: 0;
+      font-family: "Cormorant Garamond";
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 55px;
+      letter-spacing: 0.03em;
+    }
+  }
 }
 
-.gallery__wrapper {
+.gallery__main-wrapper {
   @include resetListDefaultProperties;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  margin: 0 0 47px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.gallery__slide {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 15px;
-  transition: all ease 3s;
-
-  &--shown {
-    display: flex;
-  }
+.gallery__left-wrapper {
+  @include resetListDefaultProperties;
+  display: flex;
 }
 
-.gallery__image-wrapper {
-  margin: 0 0 23px;
-}
-
-.gallery__description {
+.gallery__right-wrapper {
+  @include resetListDefaultProperties;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  p {
-    margin: 0 0 7px;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21px;
-    text-align: center;
-  }
-
-  span {
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 18px;
-    text-align: center;
-  }
 }
 
-.gallery__navigation {
-  position: absolute;
-  top: 25px;
+.gallery__inner-wrapper {
+  @include resetListDefaultProperties;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 
-.gallery__button-prev,
-.gallery__button-next {
-  @include resetButtonDefaultProperties;
-  position: absolute;
-  top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-
-  svg {
-    stroke: $accent-color;
-  }
-
-  &::after {
-    content: none;
-  }
-
-  &:focus {
-    outline: 0;
+  &--vertical {
+    flex-direction: column;
   }
 }
 
-.gallery__button-next {
-  right: 12px;
-}
+.gallery__item {
+  margin: 17px 13px;
 
-.gallery__button-prev {
-  left: 12px;
-  transform: rotate(180deg);
-}
-
-.gallery__pagination {
-  display: flex;
-  justify-content: center;
-}
-
-.gallery__bullet {
-  display: flex;
-  justify-content: center;
-  width: 15px;
-  height: 16px;
-  margin: 0 3px;
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 21px;
-  color: $additional-color;
-  opacity: 1;
-  background: transparent;
-  cursor: pointer;
-
-  &--active {
-    color: $primary-color;
-  }
-  }
-
-@media (max-width: $desktop-width) {
-  .gallery {
-    margin: 0 0 50px;
-  }
-
-  .gallery__title {
-    margin: 0 0 50px;
-  }
-
-  .gallery__wrapper {
-    margin: 0 0 40px;
-  }
-
-  .gallery__image-wrapper {
+  &--small {
     img {
-      width: 324px;
-      height: 340px;
+      width: 230px;
+      height: 150px;
     }
   }
 
-  .gallery__button-next {
-    right: 45px;
+  &--medium {
+    img {
+      width: 230px;
+      height: 230px;
+    }
   }
 
-  .gallery__button-prev {
-    left: 45px;
+  &--large {
+    img {
+      width: 400px;
+      height: 410px;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .gallery {
+    margin: 0 0 68px;
   }
 
-  .gallery__bullet {
-    margin: 0 4px 0;
+  .gallery__item {
+    margin: 10px 8px;
+
+    &--small {
+      img {
+        width: 133px;
+        height: 87px;
+      }
+    }
+
+    &--medium {
+      img {
+        width: 133px;
+        height: 133px;
+      }
+    }
+
+    &--large {
+      img {
+        width: 230px;
+        height: 240px;
+      }
+    }
   }
 }
 
 @media (max-width: $tablet-width) {
   .gallery {
-    margin: 0 0 40px;
+    margin: 0 0 58px;
   }
 
   .gallery__title {
-    margin: 0 0 40px;
+    margin: 0 0 31px;
   }
 
-  .gallery__wrapper {
-    margin: 0 0 30px;
-  }
-
-  .gallery__slide {
-    max-width: 130px;
-  }
-
-  .gallery__image-wrapper {
-    margin: 0 0 20px;
-
-    img {
-      width: 130px;
-      height: 136px;
+  .gallery__inner-wrapper {
+    &--in-mobile-hidden {
+      display: none;
     }
   }
 
-  .gallery__navigation {
-    display: none;
+  .gallery__item {
+    margin: 13px 12px;
+
+    &--large {
+      img {
+        width: 133px;
+        height: 247px;
+        object-fit: cover;
+      }
+    }
   }
 }
