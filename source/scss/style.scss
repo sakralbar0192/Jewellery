@@ -1,8 +1,10 @@
+@import "../../node_modules/swiper/swiper.scss";
 @import "./global/variables.scss";
 @import "./global/fonts.scss";
 @import "./global/normalize.scss";
 @import './global/mixins.scss';
 @import "./global/global.scss";
+@import "./blocks/swiper.scss";
 @import "./blocks/page-header.scss";
 @import "./blocks/burger-menu.scss";
 @import "./blocks/page-footer.scss";
@@ -10,6 +12,7 @@
 @import "./blocks/links-block.scss";
 @import "./blocks/section-title.scss";
 @import "./blocks/slider.scss";
+@import "./blocks/slide.scss";
 @import "./blocks/blog.scss";
 @import "./blocks/faq.scss";
 @import "./blocks/gallery.scss";

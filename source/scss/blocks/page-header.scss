@@ -176,6 +176,12 @@
     width: 1366px;
     height: 463px;
   }
+
+  &--catalog {
+    img {
+      height: 261px;
+    }
+  }
 }
 
 @media (max-width: $desktop-width) {

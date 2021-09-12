@@ -21,9 +21,8 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
-    text-decoration: underline;
-    text-decoration-color: $accent-color;
     color: $primary-color;
+    border-bottom: 1px solid $accent-color;
   }
 }
 
@@ -36,8 +35,6 @@
 
     a {
       padding: 5px 0;
-      border-bottom: 1px solid $accent-color;
-      text-decoration: none;
     }
   }
 }

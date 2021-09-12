@@ -15,6 +15,9 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 gulp.task("css", function () {
   return gulp.src("source/scss/style.scss")
@@ -41,6 +44,7 @@ gulp.task("server", function () {
   gulp.watch("source/scss/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("scripts", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -81,12 +85,17 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("scripts", function() {
+  return gulp.src("source/js/main.js")
+  .pipe(webpackStream(webpackConfig), webpack)
+  .pipe(gulp.dest('./build/js'));
+})
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/*.ico",
     "source/img/content-*.svg",
-    "source/js/*.js"
     ], {
       base: "source"
     })
@@ -97,5 +106,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "webp", "images", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "webp", "images", "css", "sprite", "html", "scripts"));
 gulp.task("start", gulp.series("build", "server"));

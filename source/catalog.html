@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewellery catalog">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Jewellery catalog</title>
+</head>
+<body>
+<header class="page-header">
+  <header class="page-header__header burger-menu">
+    <div class="page-header__logo burger-menu__logo">
+      <a>
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="page-header__nav-wrapper burger-menu__menu-wrapper">
+      <button class="page-header__burger burger-menu__toggle">
+        <span>Open menu</span>
+        <span>Close menu</span>
+      </button>
+      <div class="page-header__search-field-wrapper burger-menu__block">
+        <input type="text" placeholder="Type here to search" id="search-field">
+        <label for="search-field" class="visually-hidden">Введите поисковый запрос</label>
+        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
+      </div>
+      <nav class="page-header__user-nav-wrapper">
+        <div class="page-header__login-button burger-menu__block">
+          <a href="login.html">
+            Login
+          </a>
+        </div>
+        <div class="page-header__cart burger-menu__cart">
+          <a href="#">
+            <span>Cart</span>
+            <span>0</span>
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <nav class="page-header__site-nav-wrapper burger-menu__block">
+        <ul class="page-header__site-nav-list">
+          <li>
+            <a href="#">What’s new</a>
+          </li>
+          <li>
+            <a href="#">Chokers</a>
+          </li>
+          <li>
+            <a href="#">Necklaces</a>
+          </li>
+          <li>
+            <a href="#">Rings</a>
+          </li>
+          <li>
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="page-header__additional-nav-wrapper burger-menu__block">
+        <ul class="page-header__additional-nav-list">
+          <li>
+            <a href="#">About CH</a>
+          </li>
+          <li>
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="page-header__image-block">
+    <div class="page-header__image-wrapper page-header__image-wrapper--catalog">
+      <picture>
+        <source type="image/webp" srcset="img/catalog-main.webp 1x, img/catalog-main@2x.webp 2x">
+        <!-- 1х: 1366px; 2x: 2732px -->
+        <img src="img/catalog-main.jpg" srcset="img/catalog-main@2x.jpg 2x" alt="Jewellery" width="1366" height="261" loading="lazy">
+      </picture>
+    </div>
+    <div class="page-header__image-block-text">
+      <p>All jewellery</p>
+      <span>Discover picks of fashion's finest trends in our jewellery catalog</span>
+    </div>
+  </div>
+</header>
+<main class="catalog-main">
+  <aside class="catalog-main__filter filter">
+    <button class="filter__togle">Filter</button>
+    <div class="filter__wrapper">
+      <button class="filter__close-button">
+        <span class="visually-hidden">close</span>
+      </button>
+      <form action="" class="filter__form">
+        <div class="filter__form-wrapper">
+          <div class="filter__form-block">
+            <div class="filter__form-block-title">
+              <h4>Product</h4>
+            </div>
+            <div class="filter__form-block-wrapper">
+              <label>
+                <span>Necklaces</span>
+                <input class="visually-hidden" type="checkbox" name="Necklaces" checked>
+              </label>
+              <label>
+                <span>Chokers</span>
+                <input class="visually-hidden" type="checkbox" name="Chokers" checked>
+              </label>
+              <label>
+                <span>Rings</span>
+                <input class="visually-hidden" type="checkbox" name="Rings">
+              </label>
+              <label>
+                <span>Earrings</span>
+                <input class="visually-hidden" type="checkbox" name="Earrings" checked>
+              </label>
+            </div>
+          </div>
+          <div class="filter__form-block">
+            <div class="filter__form-block-title">
+              <h4>Material</h4>
+            </div>
+            <div class="filter__form-block-wrapper">
+              <label>
+                <span>Gold</span>
+                <input class="visually-hidden" type="checkbox" name="Gold" checked>
+              </label>
+              <label>
+                <span>Silver</span>
+                <input class="visually-hidden" type="checkbox" name="Silver" checked>
+              </label>
+            </div>
+          </div>
+          <div class="filter__form-block">
+            <div class="filter__form-block-title">
+              <h4>Collection</h4>
+            </div>
+            <div class="filter__form-block-wrapper">
+              <label>
+                <span>Pink flamingo</span>
+                <input class="visually-hidden" type="checkbox" name="Pink flamingo" checked>
+              </label>
+              <label>
+                <span>Dreams</span>
+                <input class="visually-hidden" type="checkbox" name="Dreams" checked>
+              </label>
+            </div>
+          </div>
+          <div class="filter__form-block">
+            <div class="filter__form-block-title">
+              <h4>Price</h4>
+            </div>
+            <div class="filter__form-block-wrapper">
+              <div class="filter__form-price-slider"></div>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Apply</button>
+        <button type="reset">Clear All</button>
+      </form>
+    </div>
+  </aside>
+  <section class="catalog-main__products products">
+    <div class="swiper">
+      <ul class="products__wrapper swiper-wrapper">
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/double-pearl-earrings.webp 1x, img/double-pearl-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/double-pearl-earrings.jpg" srcset="img/double-pearl-earrings@2x.jpg" alt="double-pearl-earrings" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Double pearl earrings</p>
+            <span>$ 115</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/black-choker-gold-bead.webp, 1x img/black-choker-gold-bead@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/black-choker-gold-bead.jpg" srcset="img/black-choker-gold-bead@2x.jpg" alt="black-choker-gold-bead" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Choker with gold bead</p>
+            <span>$ 55</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/gold-layered-necklace.webp 1x, img/gold-layered-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/gold-layered-necklace.jpg" srcset="img/gold-layered-necklace@2x.jpg" alt="gold-layered-necklace" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Gold layered necklace</p>
+            <span>$ 155</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/blue-gemstone-pendant.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/blue-gemstone-pendant.jpg" srcset="img/blue-gemstone-pendant@2x.jpg" alt="blue-gemstone-pendant" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Blue gemstone pendant</p>
+            <span>$ 105</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/boho-earrings.webp 1x, img/boho-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/boho-earrings.jpg" srcset="img/boho-earrings@2x.jpg" alt="boho-earrings" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Boho earrings</p>
+            <span>$ 75</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/bird-necklace.webp, 1x img/bird-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/bird-necklace.jpg" srcset="img/bird-necklace@2x.jpg" alt="bird-necklace" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Gold bird necklace</p>
+            <span>$ 135</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/black-leather-choker-necklace.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/black-leather-choker-necklace.jpg" srcset="img/black-leather-choker-necklace@2x.jpg" alt="black-leather-choker-necklace" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Black leather choker</p>
+            <span>$ 85</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/threader-necklace-closeup.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/threader-necklace-closeup.jpg" srcset="img/threader-necklace-closeup@2x.jpg" alt="threader-necklace-closeup" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Threader necklace</p>
+            <span>$ 115</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/elephant-earrings.webp 1x, img/elephant-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/elephant-earrings.jpg" srcset="img/elephant-earrings@2x.jpg" alt="elephant-earrings" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Elephant earrings</p>
+            <span>$ 95</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/threader-necklace-closeup.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/threader-necklace-closeup.jpg" srcset="img/threader-necklace-closeup@2x.jpg" alt="threader-necklace-closeup" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Threader necklace</p>
+            <span>$ 115</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/origami-crane-necklace.webp, 1x img/origami-crane-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/origami-crane-necklace.jpg" srcset="img/origami-crane-necklace@2x.jpg" alt="origami-crane-necklace" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Origami crane necklace</p>
+            <span>$ 105</span>
+          </div>
+        </li>
+
+        <li class="slide swiper-slide">
+          <div class="slide__image-wrapper">
+            <picture>
+              <source srcset="img/marble-earrings.webp 1x, img/marble-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="img/marble-earrings.jpg" srcset="img/marble-earrings@2x.jpg" alt="marble-earrings" width="270" height="272">
+            </picture>
+          </div>
+          <div class="slide__description">
+            <p>Marble earrings</p>
+            <span>$ 95</span>
+          </div>
+        </li>
+
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <form action="https://echo.htmlacademy.ru/" method="POST" class="page-footer__form subscribe-form">
+      <h3>The good stuff in your inbox</h3>
+      <p>News and updates from CH. No spam, we promise.</p>
+      <div class="subscribe-form__input-wrapper">
+        <label>
+          <span class="visually-hidden">Введите свой email</span>
+          <input type="email" placeholder="Your E-mail">
+        </label>
+        <button type="submit">
+          <span>Sign Up</span>
+          <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
+    <div class="page-footer__links-block links-block">
+      <ul class="links-block__list">
+        <li>
+          <a href="#">
+            Ordering & Payment
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Terms & Conditions
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Returns & Exchanges
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Delivery
+          </a>
+        </li>
+      </ul>
+      <ul class="links-block__list">
+        <li>
+          <a href="#">
+            About CH
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Stores & Hours
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Jobs
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+      <ul class="links-block__list links-block__list--social">
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+            </div>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+            </div>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-pintrest"></use>
+              </svg>
+            </div>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+            </div>
+
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="js/main.bundle.js"></script>
+</body>

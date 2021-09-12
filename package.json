@@ -23,7 +23,10 @@
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-stream": "^6.1.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -32,7 +35,8 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "webpack": "webpack --mode production"
   },
   "browserslist": [
     "last 2 versions",
