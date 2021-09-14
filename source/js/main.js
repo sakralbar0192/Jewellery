@@ -1,4 +1,4 @@
-import Swiper from '../../node_modules/swiper/swiper-bundle';
+import Swiper from '../../node_modules/swiper/swiper-bundle.min.js';
 
 /**
  * Swiper
@@ -59,61 +59,6 @@ if (document.querySelector('.slider')) {
     },
   })
 }
-//слайдер на странице каталога
-if (document.querySelector('.products')) {
-  new Swiper ('.swiper', {
-    autoHeight: false,
-    slidesPerColumn: 4,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 30,
-
-
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    //   renderBullet: function (index, className) {
-    //     return '<span class="' + className + '">' + (index + 1) + '</span>';
-    //   },
-    // },
-
-
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 2,
-    //     slidesPerGroup: 2,
-
-    //     pagination: {
-    //       clickable: false,
-    //       type: 'fraction',
-    //       renderFraction: function (currentClass, totalClass) {
-    //         return  '<span class="' + currentClass + '"></span>' +
-    //                 ' of ' + '&nbsp;' +
-    //                 '<span class="' + totalClass + '"></span>';
-    //       },
-    //     },
-    //   },
-
-    //   768: {
-    //     slidesPerView: 2,
-    //     slidesPerGroup: 2,
-
-    //     pagination: {
-    //       clickable: true,
-    //       type: 'bullets',
-    //       renderBullet: function (index, className) {
-    //         return '<span class="' + className + '">' + (index + 1) + '</span>';
-    //       },
-    //     },
-    //   },
-
-    //   1024: {
-    //     slidesPerView: 4,
-    //     slidesPerGroup: 4,
-    //   },
-    // },
-  })
-}
 
 /**
  * Burger-menu
@@ -131,10 +76,8 @@ burgerToggle.addEventListener('click', () => {
   burgerMenu.classList.toggle(OPEN__CLASS);
 });
 
-
-
 /**
- * Dropout
+ * Dropout на главной
 */
 if (document.querySelector('#dropout')) {
   const DROPOUT_DATA_ATTRIBUTE_NAME = 'data-dropout-number'
@@ -176,5 +119,48 @@ if (document.querySelector('#dropout')) {
       }
     })
   })
+}
+
+/**
+ * dropouts на странице каталога
+ */
+
+if (document.querySelector('#filter-dropout')) {
+  const CLOSED_DROPOUT_CLASS = 'filter__form-block--close';//класс закрытой выпадушки
+  const START_ACTIVE_DROPOUTS = [1,4]; //выпадушка, активная после загрзки страницы
+  //сохраним все выпадушки в массив и прономеруем их
+  const dropouts = document.querySelectorAll('#filter-dropout');
+  //закроем все выпадушки
+  dropouts.forEach(dropout => {
+    dropout.classList.toggle(CLOSED_DROPOUT_CLASS);
+  })
+
+  //откроем активные выпадушку
+  dropouts[START_ACTIVE_DROPOUTS[0]-1].classList.toggle(CLOSED_DROPOUT_CLASS);
+  dropouts[START_ACTIVE_DROPOUTS[1]-1].classList.toggle(CLOSED_DROPOUT_CLASS);
+  //установим обработчики событий на все выпадушки
+  dropouts.forEach(dropout => {
+    dropout.addEventListener('click', () => {
+      dropout.classList.toggle(CLOSED_DROPOUT_CLASS)
+    })
+  })
+}
+
+/**
+ * Фильтр выпадушка
+ */
+
+if (document.querySelector('#filter')) {
+  const CLOSED_FORM_FILTER_CLASS = 'filter--form-closed';
+  const filter = document.querySelector('#filter');
+  const filterToggle = filter.querySelector('#filter-toggle');
+
+  filter.classList.toggle(CLOSED_FORM_FILTER_CLASS);
+
+  filterToggle.addEventListener('click', () => {
+    filter.classList.toggle(CLOSED_FORM_FILTER_CLASS);
+  })
+
+
 }
 

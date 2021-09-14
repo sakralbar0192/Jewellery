@@ -69,6 +69,8 @@
 
 @media (max-width: $tablet-width) {
   .slide {
+    max-width: 130px;
+
     &--big {
       .slide__image-wrapper {
         img {

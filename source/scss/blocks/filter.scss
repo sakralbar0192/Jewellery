@@ -1,0 +1,277 @@
+.filter__togle {
+  display: none;
+}
+
+.filter__close-button {
+  display: none;
+}
+
+.filter__form {
+  width: 250px;
+  margin: 0 15px;
+
+  button {
+    width: 250px;
+    height: 68px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    border: 1px solid $accent-color;
+  }
+}
+
+.filter__form-wrapper {
+  margin: 0 0 35px;
+}
+
+.filter__form-block {
+  padding: 23px 25px;
+  border: 1px solid $accent-color;
+
+  &--close {
+    .filter__form-block-title {
+      margin: 0;
+
+      &::after {
+        margin: 0 0 10px;
+        border-bottom: 1px solid $accent-color;
+        border-right: 1px solid $accent-color;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+
+    .filter__form-block-wrapper {
+      display: none;
+    }
+  }
+}
+
+.filter__form-block-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px;
+
+  h4 {
+    margin: 0;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 0;
+    border-right: 0;
+    border-top: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    transform: rotate(45deg);
+  }
+}
+
+.filter__form-block-wrapper {
+  padding: 0 10px;
+
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin: 0 0 13px;
+    }
+
+    &::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      margin: 0 10px 0 0;
+      outline: 1px solid $accent-color;
+    }
+  }
+
+  input:checked+label {
+    &::before {
+      background: $accent-color;
+    }
+  }
+}
+
+.filter__form-price-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15px;
+  margin: 0 0 17px;
+
+  span {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
+
+.filter__price-slider-color-line {
+  position: absolute;
+  left: 45px;
+  width: 55%;
+  height: 1px;
+  background: $accent-color;
+  z-index: 1;
+}
+
+.filter__price-slider-uncolor-line {
+  width: 100%;
+  height: 1px;
+  background: $additional-color-three;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $accent-color;
+  }
+
+  &::before {
+    left: 35px;
+  }
+
+  &::after {
+    right: 25px;
+  }
+}
+
+.filter__price-min {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.filter__price-max {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.filter__form-submit {
+  margin: 0 0 25px;
+  color: $secondary-color;
+  background: $accent-color;
+}
+
+.filter__form-reset {
+  color: $primary-color;
+  background: transparent;
+}
+
+@media (max-width: $desktop-width) {
+  .filter {
+    width: 100%;
+    margin: 0 0 50px;
+    padding: 0 15px;
+
+    &--form-closed {
+      .filter__togle {
+        margin: 0 auto;
+      }
+
+      .filter__form {
+        display: none;
+      }
+    }
+  }
+
+  .filter__togle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 678px;
+    width: 100%;
+    height: 68px;
+    margin: 0 auto 30px;
+    color: $secondary-color;
+    background: $accent-color;
+    border: 0;
+  }
+
+  .filter__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 410px;
+    margin: 0;
+    box-shadow: 0px 5px 32px rgba($additional-color-four, 0.24);
+
+    button {
+      width: 362px;
+      margin: auto;
+    }
+  }
+
+  .filter__form-wrapper {
+    margin: 0 0 42px;
+  }
+
+  .filter__form-block-title {
+    margin: 0 0 25px;
+
+    h4 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &::after {
+      align-self: flex-end;
+      width: 18px;
+      height: 18px;
+      margin: 0 0 -5px;
+      border-top: 1px solid $accent-color;
+      border-left: 1px solid $accent-color;
+    }
+  }
+
+  .filter__form-block {
+    padding: 30px 45px 38px 7px;
+    border: 0;
+    border-bottom: 1px solid $accent-color;
+  }
+
+  .filter__form-block-wrapper {
+    label {
+      font-size: 16px;
+      line-height: 21px;
+
+      &:not(:last-of-type) {
+        margin: 0 0 17px;
+      }
+
+      &::before {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .filter {
+    margin: 0 0 40px;
+  }
+}

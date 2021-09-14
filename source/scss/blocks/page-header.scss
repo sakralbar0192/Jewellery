@@ -1,5 +1,29 @@
 .page-header {
   margin: 0 0 120px;
+
+  &--catalog {
+    margin: 0 0 80px;
+
+    .page-header__image-block-text {
+      p {
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: 0;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 29px;
+      }
+    }
+
+    .page-header__image-wrapper {
+      img {
+        height: 261px;
+      }
+    }
+  }
 }
 
 .page-header__header {
@@ -144,6 +168,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  padding: 0 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +176,7 @@
 
   p {
     margin: 0;
-    font-family: Cormorant Garamond;
+    font-family: "Cormorant Garamond";
     font-size: 45px;
     font-weight: 700;
     line-height: 58px;
@@ -161,12 +186,13 @@
   }
 
   span {
-    font-family: Cormorant Garamond;
+    font-family: "Cormorant Garamond";
     font-size: 38px;
     font-style: italic;
     font-weight: 400;
     line-height: 49px;
     letter-spacing: -0.04em;
+    text-align: center;
     color: $secondary-color;
   }
 }
@@ -176,17 +202,27 @@
     width: 1366px;
     height: 463px;
   }
-
-  &--catalog {
-    img {
-      height: 261px;
-    }
-  }
 }
 
 @media (max-width: $desktop-width) {
   .page-header {
     margin: 0 0 70px;
+
+    &--catalog {
+      margin: 0 0 50px;
+
+      .page-header__image-block-text {
+        margin: 0 0 5px;
+
+        p {
+          margin: 0 0 5px 0px;
+        }
+
+        span {
+          margin: 0;
+        }
+      }
+    }
   }
 
   .page-header__header {
@@ -360,6 +396,18 @@
 @media (max-width: $tablet-width) {
   .page-header {
     margin: 0 0 60px;
+
+    &--catalog {
+      margin: 0 0 40px;
+
+      .page-header__image-block-text {
+        margin: 0;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
 
   .page-header__header {
