@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewellery">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <title>Jewellery</title>
+</head>
+<body id="page-body">
+<header class="page-header">
+  <section class="page-header__header burger-menu">
+    <div class="page-header__logo burger-menu__logo">
+      <a href="index.html" tabindex="-1">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="page-header__nav-wrapper burger-menu__menu-wrapper">
+      <button class="page-header__burger burger-menu__toggle">
+        <span>Open menu</span>
+        <span>Close menu</span>
+      </button>
+      <div class="page-header__search-field-wrapper burger-menu__block">
+        <input type="text" placeholder="Type here to search" id="search-field">
+        <label for="search-field" class="visually-hidden">Введите поисковый запрос</label>
+        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
+      </div>
+      <nav class="page-header__user-nav-wrapper">
+        <div class="page-header__login-button burger-menu__block">
+          <a href="login.html" id="modal-view-button">
+            Login
+          </a>
+        </div>
+        <div class="page-header__cart burger-menu__cart">
+          <a href="#">
+            <span>Cart</span>
+            <span>0</span>
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <nav class="page-header__site-nav-wrapper burger-menu__block">
+        <ul class="page-header__site-nav-list">
+          <li>
+            <a href="#">What’s new</a>
+          </li>
+          <li>
+            <a href="#">Chokers</a>
+          </li>
+          <li>
+            <a href="#">Necklaces</a>
+          </li>
+          <li>
+            <a href="#">Rings</a>
+          </li>
+          <li>
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="page-header__additional-nav-wrapper burger-menu__block">
+        <ul class="page-header__additional-nav-list">
+          <li>
+            <a href="#">About CH</a>
+          </li>
+          <li>
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</header>
+<main>
+  <section class="login">
+    <div class="login__wrapper">
+      <div class="login__image-wrapper">
+        <picture>
+          <source type="image/webp" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x">
+          <!-- 1х: 430px; 2x: 860px -->
+          <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.png 2x" alt="изображение" width="430" height="138" loading="lazy">
+        </picture>
+      </div>
+      <h3 class="login__title">
+        Log In
+      </h3>
+      <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="login__form-wrapper">
+          <label>
+            <span class="visually-hidden">введите email</span>
+            <input type="email" placeholder="Your E-mail">
+          </label>
+          <label>
+            <span class="visually-hidden">введите пароль</span>
+            <input type="password" placeholder="Password">
+          </label>
+          <a href="#" class="login__foggoten-password-link">Forgot your password?</a>
+        </div>
+        <button type="submit">Log in</button>
+      </form>
+      <div class="login__sing-up-suggestion">
+        <span>Don’t have an account?</span>
+        <a href="#">Sign up</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <form action="https://echo.htmlacademy.ru/" method="POST" class="page-footer__form subscribe-form">
+      <h3>The good stuff in your inbox</h3>
+      <p>News and updates from CH. No spam, we promise.</p>
+      <div class="subscribe-form__input-wrapper">
+        <label>
+          <span class="visually-hidden">Введите свой email</span>
+          <input type="email" placeholder="Your E-mail">
+        </label>
+        <button type="submit">
+          <span>Sign Up</span>
+          <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
+    <div class="page-footer__links-block links-block">
+      <ul class="links-block__list">
+        <li>
+          <a href="#">
+            Ordering & Payment
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Terms & Conditions
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Returns & Exchanges
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Delivery
+          </a>
+        </li>
+      </ul>
+      <ul class="links-block__list">
+        <li>
+          <a href="#">
+            About CH
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Stores & Hours
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Jobs
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+      <ul class="links-block__list links-block__list--social">
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+            </div>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+            </div>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-pintrest"></use>
+              </svg>
+            </div>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="links-block__svg-wrapper">
+              <svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+            </div>
+
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="js/main.bundle.js"></script>
+</body>
+</html>

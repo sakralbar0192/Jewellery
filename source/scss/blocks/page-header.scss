@@ -37,10 +37,24 @@
   position: absolute;
   left: 50%;
   transform:  translate(-50%,0);
-  z-index: 2;
+  z-index: 10;
 
   svg {
     fill: $accent-color;
+  }
+
+  a {
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -86,6 +100,26 @@
     margin: auto;
     fill: $additional-color-two;
   }
+
+  &:focus {
+    outline: 1px dashed $accent-color;
+  }
+
+  &:hover {
+    input {
+      &::placeholder {
+        color: $accent-color;
+      }
+    }
+
+    svg {
+      fill: $accent-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .page-header__user-nav-wrapper {
@@ -96,6 +130,20 @@
   justify-content: flex-end;
   flex-basis: 50%;
   padding: 10px 0 10px 70px;
+
+  a {
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .page-header__login-button {
@@ -129,6 +177,20 @@
   flex-grow: 1;
   justify-content: center;
   padding: 59px 20px 17px;
+
+  a {
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .page-header__site-nav-list {
@@ -198,6 +260,8 @@
 }
 
 .page-header__image-wrapper {
+  background: $accent-color;
+
   img {
     width: 1366px;
     height: 463px;
@@ -233,6 +297,12 @@
   .page-header__logo {
     svg {
       fill: $secondary-color;
+    }
+
+    a {
+      &:focus {
+        outline: 1px dashed $secondary-color;
+      }
     }
   }
 

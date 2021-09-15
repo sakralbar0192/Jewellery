@@ -18,6 +18,10 @@
     font-weight: 500;
     line-height: 21px;
     border: 1px solid $accent-color;
+
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
   }
 }
 
@@ -72,6 +76,10 @@
     border-left: 1px solid $accent-color;
     transform: rotate(45deg);
   }
+
+  &:focus {
+    outline: 1px dashed $accent-color;
+  }
 }
 
 .filter__form-block-wrapper {
@@ -104,6 +112,10 @@
     &::before {
       background: $accent-color;
     }
+  }
+
+  input:focus + label {
+    outline: 1px dashed $accent-color;
   }
 }
 
@@ -196,6 +208,49 @@
         display: none;
       }
     }
+
+    &--form-opened {
+      position: relative;
+
+      .filter__form {
+        position: absolute;
+        top: 100px;
+        background: $secondary-color;
+        z-index: 10;
+      }
+
+      .filter__close-button {
+        position: absolute;
+        top: -16px;
+        right: -16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: $primary-color;
+        border: 0;
+        border-radius: 50%;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 19px;
+          height: 2px;
+          background: $secondary-color;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          transform: rotate(135deg);
+        }
+
+      }
+    }
   }
 
   .filter__togle {
@@ -205,7 +260,7 @@
     max-width: 678px;
     width: 100%;
     height: 68px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     color: $secondary-color;
     background: $accent-color;
     border: 0;
@@ -215,17 +270,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 410px;
+    width: 100%;
+    max-width: 410px;
     margin: 0;
     box-shadow: 0px 5px 32px rgba($additional-color-four, 0.24);
 
     button {
       width: 362px;
-      margin: auto;
+      margin: 0 auto 25px;
     }
   }
 
   .filter__form-wrapper {
+    width: 100%;
     margin: 0 0 42px;
   }
 
@@ -268,10 +325,56 @@
       }
     }
   }
+
+  .filter__form-price-slider {
+    height: 18px;
+  }
+
+  .filter__price-slider-color-line {
+    width: 260px;
+  }
+
+  .filter__price-slider-uncolor-line {
+    &::after,
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
   .filter {
     margin: 0 0 40px;
+
+    &--form-opened {
+      .filter__close-button {
+        right: 5px;
+      }
+    }
+  }
+
+  .filter__form {
+    left: 0;
+    right: 0;
+    max-width: 320px;
+    margin: 0 auto;
+
+    button {
+      width: 230px;
+    }
+  }
+
+  .filter__close-button {
+    top: 0;
+    right: 0;
+  }
+
+  .filter__form-block {
+    padding: 30px 20px 38px 20px;
+  }
+
+  .filter__price-slider-color-line {
+    width: 180px;
   }
 }

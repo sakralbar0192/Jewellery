@@ -18,11 +18,23 @@
   a {
     display: flex;
     align-items: center;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
     color: $secondary-color;
+
+    &:focus {
+      outline: 1px dashed $secondary-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--social {

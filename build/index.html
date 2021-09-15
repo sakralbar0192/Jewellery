@@ -13,11 +13,11 @@
   <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
   <title>Jewellery</title>
 </head>
-<body>
+<body id="page-body">
 <header class="page-header">
-  <header class="page-header__header burger-menu">
+  <section class="page-header__header burger-menu">
     <div class="page-header__logo burger-menu__logo">
-      <a>
+      <a tabindex="-1">
         <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
@@ -38,7 +38,7 @@
       </div>
       <nav class="page-header__user-nav-wrapper">
         <div class="page-header__login-button burger-menu__block">
-          <a href="login.html">
+          <a href="login.html" id="modal-view-button">
             Login
           </a>
         </div>
@@ -85,8 +85,8 @@
         </ul>
       </nav>
     </div>
-  </header>
-  <div class="page-header__image-block">
+  </section>
+  <section class="page-header__image-block">
     <div class="page-header__image-wrapper">
       <picture>
         <source type="image/webp" srcset="img/main.webp 1x, img/main@2x.webp 2x">
@@ -98,7 +98,7 @@
       <p>Perfection</p>
       <span>made to be yours</span>
     </div>
-  </div>
+  </section>
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">Jewellery shop</h1>
@@ -112,7 +112,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/purple-gemstone-necklace.jpg" srcset="img/purple-gemstone-necklace@2x.jpg" alt="purple-gemstone-necklace" width="270" height="284">
             </picture>
@@ -125,7 +125,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/layered-choker-necklace.webp, 1x img/layered-choker-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/layered-choker-necklace.webp 1x, img/layered-choker-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/layered-choker-necklace.jpg" srcset="img/layered-choker-necklace@2x.jpg" alt="layered-choker-necklace" width="270" height="284">
             </picture>
@@ -138,7 +138,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/dainty-gold-necklace.jpg" srcset="img/dainty-gold-necklace@2x.jpg" alt="dainty-gold-necklace" width="270" height="284">
             </picture>
@@ -151,7 +151,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
+              <source type="image/webp" srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/galaxy-earrings.jpg" srcset="img/galaxy-earrings@2x.jpg" alt="galaxy-earrings" width="270" height="284">
             </picture>
@@ -164,7 +164,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/purple-gemstone-necklace.jpg" srcset="img/purple-gemstone-necklace@2x.jpg" alt="purple-gemstone-necklace" width="270" height="284">
             </picture>
@@ -177,7 +177,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/layered-choker-necklace.webp, 1x img/layered-choker-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/layered-choker-necklace.webp 1x, img/layered-choker-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/layered-choker-necklace.jpg" srcset="img/layered-choker-necklace@2x.jpg" alt="layered-choker-necklace" width="270" height="284">
             </picture>
@@ -190,7 +190,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/dainty-gold-necklace.jpg" srcset="img/dainty-gold-necklace@2x.jpg" alt="dainty-gold-necklace" width="270" height="284">
             </picture>
@@ -203,7 +203,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
+              <source type="image/webp" srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/galaxy-earrings.jpg" srcset="img/galaxy-earrings@2x.jpg" alt="galaxy-earrings" width="270" height="284">
             </picture>
@@ -216,7 +216,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/purple-gemstone-necklace.jpg" srcset="img/purple-gemstone-necklace@2x.jpg" alt="purple-gemstone-necklace" width="270" height="284">
             </picture>
@@ -229,7 +229,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/layered-choker-necklace.webp, 1x img/layered-choker-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/layered-choker-necklace.webp 1x, img/layered-choker-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/layered-choker-necklace.jpg" srcset="img/layered-choker-necklace@2x.jpg" alt="layered-choker-necklace" width="270" height="284">
             </picture>
@@ -242,7 +242,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
+              <source type="image/webp" srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/dainty-gold-necklace.jpg" srcset="img/dainty-gold-necklace@2x.jpg" alt="dainty-gold-necklace" width="270" height="284">
             </picture>
@@ -255,7 +255,7 @@
         <li class="slide slide--big swiper-slide">
           <div class="slide__image-wrapper">
             <picture>
-              <source srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
+              <source type="image/webp" srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
               <!-- 1х: 270px; 2x: 540px -->
               <img src="img/galaxy-earrings.jpg" srcset="img/galaxy-earrings@2x.jpg" alt="galaxy-earrings" width="270" height="284">
             </picture>
@@ -267,13 +267,13 @@
         </li>
       </ul>
       <div class="swiper-navigation">
-        <button class="slider__button-prev swiper-button-prev">
+        <button class="slider__button-prev swiper-button-prev" tabindex="0">
           <span class="visually-hidden">Назад</span>
           <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
           </svg>
         </button>
-        <button class="slider__button-next swiper-button-next">
+        <button class="slider__button-next swiper-button-next" tabindex="0">
           <span class="visually-hidden">Вперед</span>
           <svg width="37" height="17" viewBox="0 0 37 17" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
@@ -295,7 +295,7 @@
             <div class="blog__image-wrapper">
               <picture>
                 <source type="image/webp" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.webp 1x, img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.webp 2x">
-                <!-- 1х: px; 2x: px -->
+                <!-- 1х: 285px; 2x: 570px -->
                 <img src="img/jess-harper-sunday-b5NwJj4bVcg-unsplash.jpg" srcset="img/jess-harper-sunday-b5NwJj4bVcg-unsplash@2x.jpg 2x" alt="article-one" width="285" height="300" loading="lazy">
               </picture>
             </div>
@@ -309,7 +309,7 @@
             <div class="blog__image-wrapper">
               <picture>
                 <source type="image/webp" srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash.webp 1x, img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.webp 2x">
-                <!-- 1х: px; 2x: px -->
+                <!-- 1х: 285px; 2x: 570px -->
                 <img src="img/alex-holyoake-Cg0dPdmy5dE-unsplash.jpg" srcset="img/alex-holyoake-Cg0dPdmy5dE-unsplash@2x.jpg 2x" alt="article-two" width="285" height="300" loading="lazy">
               </picture>
             </div>
@@ -325,7 +325,7 @@
         <div class="blog__image-wrapper">
           <picture>
             <source type="image/webp" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash.webp 1x, img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.webp 2x">
-            <!-- 1х: px; 2x: px -->
+            <!-- 1х: 285px; 2x: 570px -->
             <img src="img/alve-odonnell-RP4_f4zu_8A-unsplash.jpg" srcset="img/alve-odonnell-RP4_f4zu_8A-unsplash@2x.jpg 2x" alt="article-three" width="285" height="300" loading="lazy">
           </picture>
         </div>
@@ -342,26 +342,26 @@
       <span>Frequently asked questions</span>
     </h2>
     <ul class="faq__wrapper">
-      <li class="faq__item" id="dropout">
-        <div class="faq__question" id="dropout-toggle">
+      <li class="faq__item dropout">
+        <div class="faq__question" tabindex="0">
           <h4>What materials are the jewellery made of?</h4>
         </div>
         <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
       </li>
-      <li class="faq__item" id="dropout">
-        <div class="faq__question" id="dropout-toggle">
+      <li class="faq__item dropout">
+        <div class="faq__question" tabindex="0">
           <h4>Which countries do you deliver to?</h4>
         </div>
         <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
       </li>
-      <li class="faq__item" id="dropout">
-        <div class="faq__question" id="dropout-toggle">
+      <li class="faq__item dropout">
+        <div class="faq__question" tabindex="0">
           <h4>What are the payment methods?</h4>
         </div>
         <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
       </li>
-      <li class="faq__item" id="dropout">
-        <div class="faq__question" id="dropout-toggle">
+      <li class="faq__item dropout">
+        <div class="faq__question" tabindex="0">
           <h4>Can I return the jewellery if it didn’t fit?</h4>
         </div>
         <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
@@ -377,67 +377,75 @@
       <a href="#">Follow Us</a>
     </h2>
     <ul class="gallery__main-wrapper">
-      <ul class="gallery__left-wrapper">
-        <li>
-          <ul class="gallery__inner-wrapper gallery__inner-wrapper--vertical">
-            <li class="gallery__item gallery__item--medium">
-              <picture>
-                <source type="image/8.webp" srcset="img/8.webp 1x, img/8@2x.webp 2x">
-                <!-- 1х: 133px; 2x: 266px -->
-                <img src="img/8.jpg" srcset="img/8@2x.jpg 2x" alt="8" width="230" height="230" loading="lazy">
-              </picture>
-            </li>
-            <li class="gallery__item gallery__item--small">
-              <picture>
-                <source type="image/webp" srcset="img/1.webp 1x, img/1@2x.webp 2x">
-                <!-- 1х: 133px; 2x: 266px -->
-                <img src="img/1.jpg" srcset="img/1@2x.jpg 2x" alt="1" width="230" height="150" loading="lazy">
-              </picture>
-            </li>
-          </ul>
-        </li>
-        <li class="gallery__item gallery__item--large">
-          <picture>
-            <source type="image/webp" srcset="img/2.webp 1x, img/2@2x.webp 2x">
-            <!-- 1х: 231px; 2x: 240px -->
-            <img src="img/2.jpg" srcset="img/2@2x.jpg 2x" alt="2" width="400" height="410" loading="lazy">
-          </picture>
-        </li>
-      </ul>
-      <ul class="gallery__right-wrapper">
-        <ul class="gallery__inner-wrapper gallery__inner-wrapper--gorizontal gallery__inner-wrapper--in-mobile-hidden">
-          <li class="gallery__item gallery__item--medium">
-            <picture>
-              <source type="image/webp" srcset="img/4.webp 1x, img/4@2x.webp 2x">
-              <!-- 1х: 133px; 2x: 133px -->
-              <img src="img/4.jpg" srcset="img/4@2x.jpg 2x" alt="4" width="230" height="230" loading="lazy">
-            </picture>
+      <li>
+        <ul class="gallery__left-wrapper">
+          <li>
+            <ul class="gallery__inner-wrapper gallery__inner-wrapper--vertical">
+              <li class="gallery__item gallery__item--medium">
+                <picture>
+                  <source type="image/8.webp" srcset="img/8.webp 1x, img/8@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 266px -->
+                  <img src="img/8.jpg" srcset="img/8@2x.jpg 2x" alt="8" width="230" height="230" loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item gallery__item--small">
+                <picture>
+                  <source type="image/webp" srcset="img/1.webp 1x, img/1@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 266px -->
+                  <img src="img/1.jpg" srcset="img/1@2x.jpg 2x" alt="1" width="230" height="150" loading="lazy">
+                </picture>
+              </li>
+            </ul>
           </li>
-          <li class="gallery__item gallery__item--medium">
+          <li class="gallery__item gallery__item--large">
             <picture>
-              <source type="image/webp" srcset="img/6.webp 1x, img/6@2x.webp 2x">
-              <!-- 1х: 133px; 2x: 133px -->
-              <img src="img/6.jpg" srcset="img/6@2x.jpg 2x" alt="6" width="230" height="230" loading="lazy">
+              <source type="image/webp" srcset="img/2.webp 1x, img/2@2x.webp 2x">
+              <!-- 1х: 231px; 2x: 240px -->
+              <img src="img/2.jpg" srcset="img/2@2x.jpg 2x" alt="2" width="400" height="410" loading="lazy">
             </picture>
           </li>
         </ul>
-        <ul class="gallery__inner-wrapper gallery__inner-wrapper--gorizontal">
-          <li class="gallery__item gallery__item--small">
-            <picture>
-              <source type="image/webp" srcset="img/5.webp 1x, img/5@2x.webp 2x">
-              <!-- 1х: 133px; 2x: 86px -->
-              <img src="img/5.jpg" srcset="img/5@2x.jpg 2x" alt="5" width="230" height="150" loading="lazy">
-            </picture>
+      </li>
+      <li>
+        <ul class="gallery__right-wrapper">
+          <li>
+            <ul class="gallery__inner-wrapper gallery__inner-wrapper--gorizontal gallery__inner-wrapper--in-mobile-hidden">
+              <li class="gallery__item gallery__item--medium">
+                <picture>
+                  <source type="image/webp" srcset="img/4.webp 1x, img/4@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 133px -->
+                  <img src="img/4.jpg" srcset="img/4@2x.jpg 2x" alt="4" width="230" height="230" loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item gallery__item--medium">
+                <picture>
+                  <source type="image/webp" srcset="img/6.webp 1x, img/6@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 133px -->
+                  <img src="img/6.jpg" srcset="img/6@2x.jpg 2x" alt="6" width="230" height="230" loading="lazy">
+                </picture>
+              </li>
+            </ul>
           </li>
-          <li class="gallery__item gallery__item--small">
-            <picture>
-              <source type="image/webp" srcset="img/7.webp 1x, img/7@2x.webp 2x">
-              <!-- 1х: 133px; 2x: 86px -->
-              <img src="img/7.jpg" srcset="img/7@2x.jpg 2x" alt="7" width="230" height="150" loading="lazy">
-            </picture>
+          <li>
+            <ul class="gallery__inner-wrapper gallery__inner-wrapper--gorizontal">
+              <li class="gallery__item gallery__item--small">
+                <picture>
+                  <source type="image/webp" srcset="img/5.webp 1x, img/5@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 86px -->
+                  <img src="img/5.jpg" srcset="img/5@2x.jpg 2x" alt="5" width="230" height="150" loading="lazy">
+                </picture>
+              </li>
+              <li class="gallery__item gallery__item--small">
+                <picture>
+                  <source type="image/webp" srcset="img/7.webp 1x, img/7@2x.webp 2x">
+                  <!-- 1х: 133px; 2x: 86px -->
+                  <img src="img/7.jpg" srcset="img/7@2x.jpg 2x" alt="7" width="230" height="150" loading="lazy">
+                </picture>
+              </li>
+            </ul>
           </li>
         </ul>
-      </ul>
+      </li>
     </ul>
   </section>
 </main>
@@ -550,6 +558,51 @@
     </div>
   </div>
 </footer>
+
+<section class="modal" id="modal">
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal__wrapper">
+    <button type="button" id="close-modal-button" tabindex="1">
+      <span class="visually-hidden">
+        Закрыть меню
+      </span>
+    </button>
+    <div class="login">
+      <div class="login__wrapper">
+        <div class="login__image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x">
+            <!-- 1х: 430px; 2x: 860px -->
+            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.png 2x" alt="изображение" width="430" height="138" loading="lazy">
+          </picture>
+        </div>
+        <h3 class="login__title">
+          Log In
+        </h3>
+        <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST" id="login-form">
+          <div class="login__form-wrapper">
+            <label>
+              <span class="visually-hidden">введите email</span>
+              <input type="email" placeholder="Your E-mail" name="email" tabindex="1">
+            </label>
+            <label>
+              <span class="visually-hidden">введите пароль</span>
+              <input type="password" placeholder="Password" tabindex="1">
+            </label>
+            <a href="#" class="login__foggoten-password-link" tabindex="1">Forgot your password?</a>
+          </div>
+          <button type="submit" tabindex="1">Log in</button>
+        </form>
+        <div class="login__sing-up-suggestion">
+          <span>Don’t have an account?</span>
+          <a href="#" tabindex="1">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <script src="js/main.bundle.js"></script>
 </body>
 </html>

@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>Jewellery catalog</title>
 </head>
-<body>
+<body id="page-body">
 <header class="page-header page-header--catalog">
-  <header class="page-header__header burger-menu">
+  <section class="page-header__header burger-menu">
     <div class="page-header__logo burger-menu__logo">
       <a href="index.html">
         <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@
       </div>
       <nav class="page-header__user-nav-wrapper">
         <div class="page-header__login-button burger-menu__block">
-          <a href="login.html">
+          <a href="login.html" id="modal-view-button">
             Login
           </a>
         </div>
@@ -79,8 +79,8 @@
         </ul>
       </nav>
     </div>
-  </header>
-  <div class="page-header__image-block">
+  </section>
+  <section class="page-header__image-block">
     <div class="page-header__image-wrapper">
       <picture>
         <source type="image/webp" srcset="img/catalog-main.webp 1x, img/catalog-main@2x.webp 2x">
@@ -92,19 +92,19 @@
       <p>All jewellery</p>
       <span>Discover picks of fashion's finest trends in our jewellery catalog</span>
     </div>
-  </div>
+  </section>
 </header>
 <main class="catalog-main">
   <aside class="catalog-main__filter filter" id="filter">
     <button class="filter__togle" id="filter-toggle">Filter</button>
     <div class="filter__wrapper">
-      <button class="filter__close-button">
-        <span class="visually-hidden">close</span>
-      </button>
-      <form action="" class="filter__form">
+      <form action="https://echo.htmlacademy.ru/" class="filter__form">
+        <button class="filter__close-button" type="button" id="form-close-button">
+          <span class="visually-hidden">close</span>
+        </button>
         <div class="filter__form-wrapper">
-          <div class="filter__form-block" id="filter-dropout">
-            <div class="filter__form-block-title">
+          <div class="filter__form-block filter-dropout">
+            <div class="filter__form-block-title filter-dropout-toggle" tabindex="0">
               <h4>Product</h4>
             </div>
             <div class="filter__form-block-wrapper">
@@ -126,8 +126,8 @@
               </label>
             </div>
           </div>
-          <div class="filter__form-block" id="filter-dropout">
-            <div class="filter__form-block-title">
+          <div class="filter__form-block filter-dropout">
+            <div class="filter__form-block-title filter-dropout-toggle" tabindex="0">
               <h4>Material</h4>
             </div>
             <div class="filter__form-block-wrapper">
@@ -141,13 +141,13 @@
               </label>
             </div>
           </div>
-          <div class="filter__form-block" id="filter-dropout">
-            <div class="filter__form-block-title">
+          <div class="filter__form-block filter-dropout">
+            <div class="filter__form-block-title filter-dropout-toggle" tabindex="0">
               <h4>Collection</h4>
             </div>
             <div class="filter__form-block-wrapper">
-              <input class="visually-hidden" type="checkbox" name="Pink flamingo" id="Pink flamingo" checked="">
-              <label for="Pink flamingo">
+              <input class="visually-hidden" type="checkbox" name="Pink-flamingo" id="Pink-flamingo" checked="">
+              <label for="Pink-flamingo">
                 <span>Pink flamingo</span>
               </label>
               <input class="visually-hidden" type="checkbox" name="Dreams" id="Dreams" checked="">
@@ -156,8 +156,8 @@
               </label>
             </div>
           </div>
-          <div class="filter__form-block" id="filter-dropout">
-            <div class="filter__form-block-title">
+          <div class="filter__form-block filter-dropout">
+            <div class="filter__form-block-title filter-dropout-toggle" tabindex="0">
               <h4>Price</h4>
             </div>
             <div class="filter__form-block-wrapper">
@@ -181,7 +181,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/double-pearl-earrings.webp 1x, img/double-pearl-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="img/double-pearl-earrings.webp 1x, img/double-pearl-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/double-pearl-earrings.jpg" srcset="img/double-pearl-earrings@2x.jpg" alt="double-pearl-earrings" width="270" height="272">
           </picture>
@@ -195,7 +195,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/black-choker-gold-bead.webp, 1x img/black-choker-gold-bead@2x.webp 2x">
+            <source type="image/webp" srcset="img/black-choker-gold-bead.webp 1x, img/black-choker-gold-bead@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/black-choker-gold-bead.jpg" srcset="img/black-choker-gold-bead@2x.jpg" alt="black-choker-gold-bead" width="270" height="272">
           </picture>
@@ -209,7 +209,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/gold-layered-necklace.webp 1x, img/gold-layered-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="img/gold-layered-necklace.webp 1x, img/gold-layered-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/gold-layered-necklace.jpg" srcset="img/gold-layered-necklace@2x.jpg" alt="gold-layered-necklace" width="270" height="272">
           </picture>
@@ -223,7 +223,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/blue-gemstone-pendant.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
+            <source type="image/webp" srcset="img/blue-gemstone-pendant.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/blue-gemstone-pendant.jpg" srcset="img/blue-gemstone-pendant@2x.jpg" alt="blue-gemstone-pendant" width="270" height="272">
           </picture>
@@ -237,7 +237,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/boho-earrings.webp 1x, img/boho-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="img/boho-earrings.webp 1x, img/boho-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/boho-earrings.jpg" srcset="img/boho-earrings@2x.jpg" alt="boho-earrings" width="270" height="272">
           </picture>
@@ -251,7 +251,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/bird-necklace.webp, 1x img/bird-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="img/bird-necklace.webp 1x, img/bird-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/bird-necklace.jpg" srcset="img/bird-necklace@2x.jpg" alt="bird-necklace" width="270" height="272">
           </picture>
@@ -265,7 +265,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/black-leather-choker-necklace.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="img/black-leather-choker-necklace.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/black-leather-choker-necklace.jpg" srcset="img/black-leather-choker-necklace@2x.jpg" alt="black-leather-choker-necklace" width="270" height="272">
           </picture>
@@ -279,13 +279,13 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/purple-gemstone-necklace.jpg" srcset="img/purple-gemstone-necklace@2x.jpg" alt="purple-gemstone-necklace" width="270" height="272">
           </picture>
         </div>
         <div class="slide__description">
-          <p>Threader necklace</p>
+          <p>Necklace with amethyst</p>
           <span>$ 115</span>
         </div>
       </li>
@@ -293,7 +293,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/elephant-earrings.webp 1x, img/elephant-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="img/elephant-earrings.webp 1x, img/elephant-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/elephant-earrings.jpg" srcset="img/elephant-earrings@2x.jpg" alt="elephant-earrings" width="270" height="272">
           </picture>
@@ -307,7 +307,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/threader-necklace-closeup.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
+            <source type="image/webp" srcset="img/threader-necklace-closeup.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/threader-necklace-closeup.jpg" srcset="img/threader-necklace-closeup@2x.jpg" alt="threader-necklace-closeup" width="270" height="272">
           </picture>
@@ -321,7 +321,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/origami-crane-necklace.webp 1x, img/origami-crane-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="img/origami-crane-necklace.webp 1x, img/origami-crane-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/origami-crane-necklace.jpg" srcset="img/origami-crane-necklace@2x.jpg" alt="origami-crane-necklace" width="270" height="272">
           </picture>
@@ -335,7 +335,7 @@
       <li class="slide products__slide">
         <div class="slide__image-wrapper">
           <picture>
-            <source srcset="img/marble-earrings.webp 1x, img/marble-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="img/marble-earrings.webp 1x, img/marble-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
             <img src="img/marble-earrings.jpg" srcset="img/marble-earrings@2x.jpg" alt="marble-earrings" width="270" height="272">
           </picture>
@@ -348,11 +348,11 @@
 
     </ul>
     <div class="products__pagination">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
+      <span tabindex="0">1</span>
+      <span tabindex="0">2</span>
+      <span tabindex="0">3</span>
+      <span tabindex="0">4</span>
+      <span tabindex="0">5</span>
     </div>
     <div class="products__navigation">
       <button class="products__prev-button">
@@ -473,6 +473,51 @@
     </div>
   </div>
 </footer>
+
+<section class="modal" id="modal">
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal__wrapper">
+    <button type="button" id="close-modal-button" tabindex="1">
+      <span class="visually-hidden">
+        Закрыть меню
+      </span>
+    </button>
+    <div class="login">
+      <div class="login__wrapper">
+        <div class="login__image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x">
+            <!-- 1х: 430px; 2x: 860px -->
+            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.png 2x" alt="изображение" width="430" height="138" loading="lazy">
+          </picture>
+        </div>
+        <h3 class="login__title">
+          Log In
+        </h3>
+        <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST" id="login-form">
+          <div class="login__form-wrapper">
+            <label>
+              <span class="visually-hidden">введите email</span>
+              <input type="email" placeholder="Your E-mail" name="email" tabindex="1">
+            </label>
+            <label>
+              <span class="visually-hidden">введите пароль</span>
+              <input type="password" placeholder="Password" tabindex="1">
+            </label>
+            <a href="#" class="login__foggoten-password-link" tabindex="1">Forgot your password?</a>
+          </div>
+          <button type="submit" tabindex="1">Log in</button>
+        </form>
+        <div class="login__sing-up-suggestion">
+          <span>Don’t have an account?</span>
+          <a href="#" tabindex="1">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <script src="js/main.bundle.js"></script>
 </body>
 </html>

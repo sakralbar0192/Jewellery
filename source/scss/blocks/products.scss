@@ -12,12 +12,13 @@
 }
 
 .products__slide {
-  margin: 0 15px 33px;
+  margin: 0 15px 36px;
 }
 
 .products__pagination {
   display: flex;
   justify-content: center;
+
 
   span {
     margin: 0 6px;
@@ -26,9 +27,23 @@
     font-weight: 500;
     line-height: 21px;
     color: $additional-color;
+    cursor: pointer;
+    z-index: 1;
 
     &:first-child {
       color: $primary-color;
+    }
+
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
@@ -43,7 +58,19 @@
   width: 97%;
 
   button {
-    @include resetButtonDefaultProperties
+    @include resetButtonDefaultProperties;
+
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

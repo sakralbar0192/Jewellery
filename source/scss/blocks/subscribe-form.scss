@@ -46,6 +46,18 @@
     &::placeholder {
       color: $additional-color;
     }
+
+    &:focus {
+      outline: 1px dashed $secondary-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   button {
@@ -68,6 +80,18 @@
       width: 29px;
       margin: 0 0 0 15px;
       stroke: $secondary-color;
+    }
+
+    &:focus {
+      outline: 1px dashed $secondary-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

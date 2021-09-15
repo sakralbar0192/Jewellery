@@ -6,17 +6,10 @@
   margin: 0 auto 77px;
 }
 
-.catalog-main__filter {
-
-}
-
-.catalog-main__products {
-
-}
-
 @media (max-width: $desktop-width) {
   .catalog-main {
     flex-direction: column;
+    margin: 0 auto 75px;
   }
 }
 

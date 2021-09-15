@@ -8,7 +8,7 @@
 
 .swiper-wrapper {
   @include resetListDefaultProperties;
-  margin: 0 0 47px;
+  margin: 0 0 50px;
 }
 
 .swiper-pagination {
@@ -31,6 +31,18 @@
   &-active {
     color: $primary-color;
   }
+
+  &:focus {
+    outline: 1px dashed $accent-color;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .swiper-navigation {
@@ -39,6 +51,20 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  button {
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .swiper-button-prev,

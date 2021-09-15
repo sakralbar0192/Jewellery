@@ -28,9 +28,25 @@
   &--reverse {
     flex-direction: row-reverse;
   }
+
+  a {
+    &:focus {
+      outline: 1px dashed $accent-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .blog__image-wrapper {
+  background: $additional-color-three;
+
   img {
     width: 285px;
     height: 300px;
@@ -43,7 +59,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 285px;
-  height: 300px;
+  min-height: 300px;
   padding: 70px 60px;
   background: $additional-color-three;
 
@@ -58,7 +74,7 @@
 
   h3 {
     margin: 0 0 38px;
-    font-family: Cormorant Garamond;
+    font-family: "Cormorant Garamond";
     font-size: 26px;
     font-weight: 600;
     line-height: 34px;

@@ -1,0 +1,85 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(#000000, 0.5);
+  z-index: 100;
+  overflow: auto;
+
+  &._open {
+    display: flex;
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal__wrapper {
+  position: relative;
+  max-height: 586px;
+  z-index: 200;
+}
+
+.modal__wrapper > button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  background: inherit;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 23px;
+    height: 2px;
+    margin: auto;
+    background: $primary-color;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(135deg);
+  }
+
+  &:focus {
+    outline: 1px dashed $secondary-color;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .modal__wrapper > button {
+    top: 15px;
+
+    &::after,
+    &::before {
+      width: 20px;
+    }
+  }
+}
