@@ -1,7 +1,7 @@
 .subscribe-form {
   padding: 0 85px 0 0;
 
-  h3 {
+  &>p {
     margin: 0 0 10px;
     font-family: "Cormorant Garamond";
     font-size: 34px;
@@ -10,7 +10,9 @@
     letter-spacing: 0.03em;
     color: $secondary-color;
   }
+}
 
+.subscribe-form__text {
   p {
     margin: 0 0 35px 5px;
     font-family: "Poppins";
@@ -100,9 +102,11 @@
   .subscribe-form {
     margin: 0 0 45px;
     padding: 0 115px 0 0;
+  }
 
+  .subscribe-form__text {
     p {
-    margin: 0 0 35px 0;
+      margin: 0 0 35px 0;
     }
   }
 }
@@ -111,11 +115,13 @@
   .subscribe-form {
     padding: 0;
 
-    h3 {
+    &>p {
       margin: 0 0 14px;
       padding: 0 45px 0 0;
     }
+  }
 
+  .subscribe-form__text {
     p {
       margin: 0 0 41px;
       padding: 0 45px 0 0;

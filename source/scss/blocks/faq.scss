@@ -19,14 +19,6 @@
   padding: 44px 50px 40px 40px;
   border: 1px solid $accent-color;
 
-  h4 {
-    margin: 0;
-    font-family: "Poppins";
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 23px;
-  }
-
   p {
     margin: 0;
     padding: 0 350px 0 10px;
@@ -37,16 +29,16 @@
   }
 
   &--closed {
-    h4 {
-      margin: 0;
-    }
-
     p {
       display: none;
     }
 
     .faq__question {
       margin: 0;
+
+      h3 {
+        margin: 0;
+      }
 
       &::after {
         border-top: 0;
@@ -64,6 +56,14 @@
   justify-content: space-between;
   margin: 0 0 9px;
   cursor: pointer;
+
+  h3 {
+    margin: 0;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
 
   &::after {
     content: "";
@@ -105,7 +105,7 @@
   .faq__item {
     padding: 44px 53px 43px 50px;
 
-    h4 {
+    h3 {
       margin: 0 0 10px;
     }
 
@@ -114,12 +114,12 @@
     }
 
     &--closed {
-      h4 {
+      h3 {
         margin: 0;
       }
 
       .faq__question {
-        h4 {
+        h3 {
           padding: 0 5px 0 0;
         }
 
@@ -156,14 +156,6 @@
   .faq__item {
     padding: 16px 25px 20px;
 
-    h4 {
-      max-width: 78%;
-      margin: 0;
-      font-family: "Poppins";
-      font-size: 16px;
-      line-height: 22px;
-    }
-
     p {
       max-width: 87%;
       padding: 0;
@@ -173,12 +165,12 @@
     }
 
     &--closed {
-      h4 {
-        margin: 0;
-      }
-
       .faq__question {
         align-items: flex-start;
+
+        h3 {
+          margin: 0;
+        }
 
         &::after {
           margin: 0 0 5px;
@@ -187,5 +179,14 @@
     }
   }
 
+  .faq__question {
+    h3 {
+      max-width: 78%;
+      margin: 0;
+      font-family: "Poppins";
+      font-size: 16px;
+      line-height: 22px;
+    }
 
+  }
 }
