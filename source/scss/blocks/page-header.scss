@@ -18,9 +18,12 @@
       }
     }
 
-    .page-header__image-wrapper {
-      img {
-        height: 261px;
+    .page-header__image-block  {
+      height: 261px;
+      background-image: url('../img/catalog-main.jpg');
+
+      @media (min-resolution: 2dppx) {
+        background-image: url('../img/catalog-main@2x.jpg');
       }
     }
   }
@@ -220,7 +223,14 @@
 .page-header__image-block {
   position: relative;
   max-width: 1366px;
+  height: 463px;
   margin: auto;
+  background: url('../img/main.jpg') center no-repeat $accent-color;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/main@2x.jpg');
+  }
 }
 
 .page-header__image-block-text {
@@ -259,21 +269,20 @@
   }
 }
 
-.page-header__image-wrapper {
-  background: $accent-color;
-
-  img {
-    width: 1366px;
-    height: 463px;
-  }
-}
-
 @media (max-width: $desktop-width) {
   .page-header {
     margin: 0 0 70px;
 
     &--catalog {
       margin: 0 0 50px;
+
+      .page-header__image-block  {
+        background-image: url('../img/catalog-main-tablet.jpg');
+
+        @media (min-resolution: 2dppx) {
+          background-image: url('../img/catalog-main-tablet@2x.jpg');
+        }
+      }
 
       .page-header__image-block-text {
         margin: 0 0 5px;
@@ -445,6 +454,15 @@
     }
   }
 
+  .page-header__image-block {
+    height: 463px;
+    background-image: url('../img/main-tablet.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/main-tablet@2x.jpg');
+    }
+  }
+
   .page-header__image-block-text {
     margin: 5px 15px 0 0;
 
@@ -460,6 +478,14 @@
 
     &--catalog {
       margin: 0 0 40px;
+
+      .page-header__image-block  {
+        background-image: url('../img/catalog-main-mobile.jpg');
+
+        @media (min-resolution: 2dppx) {
+          background-image: url('../img/catalog-main-mobile@2x.jpg');
+        }
+      }
 
       .page-header__image-block-text {
         margin: 0;
@@ -508,8 +534,11 @@
   }
 
   .page-header__image-block {
-    img {
-      object-fit: cover;
+    height: 463px;
+    background-image: url('../img/main-mobile.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/main-mobile@2x.jpg');
     }
   }
 

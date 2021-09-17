@@ -9,6 +9,7 @@
   }
 
   span {
+    display: flex;
     margin: 0 0 25px;
     font-family: "Cormorant Garamond";
     font-size: 34px;
@@ -16,6 +17,10 @@
     line-height: 44px;
     letter-spacing: 0.03em;
     color: $primary-color;
+
+    span {
+      margin: 0;
+    }
   }
 
   a {

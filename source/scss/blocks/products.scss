@@ -82,11 +82,13 @@
 
 @media (max-width: $tablet-width) {
   .products__slide {
+    max-width: 130px;
     margin: 0 15px 23px;
   }
 
   .products__wrapper {
-    margin: 0 0 22px;
+    max-width: 450px;
+    margin: 0 auto 22px;
   }
 
   .products__navigation {

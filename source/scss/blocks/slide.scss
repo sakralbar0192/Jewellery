@@ -9,7 +9,8 @@
     .slide__image-wrapper {
       img {
         width: 270px;
-        height: 284px;
+        max-height: 284px;
+        height: auto;
       }
     }
   }
@@ -21,7 +22,8 @@
 
   img {
     width: 270px;
-    height: 272px;
+    max-height: 272px;
+    height: auto;
   }
 }
 
@@ -54,7 +56,8 @@
       .slide__image-wrapper {
         img {
           width: 324px;
-          height: 340px;
+          max-height: 340px;
+          height: auto;
         }
       }
     }
@@ -63,20 +66,20 @@
   .slide__image-wrapper {
     img {
       width: 206px;
-      height: 208px;
+      max-height: 208px;
+      height: auto;
     }
   }
 }
 
 @media (max-width: $tablet-width) {
   .slide {
-    max-width: 130px;
-
     &--big {
       .slide__image-wrapper {
         img {
-          width: 130px;
-          height: 136px;
+          min-width: 130px;
+          min-height: 136px;
+          height: auto;
         }
       }
     }

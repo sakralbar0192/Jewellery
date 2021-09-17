@@ -28,6 +28,18 @@
     line-height: 21px;
   }
 
+  &:focus {
+    outline: 1px dashed $accent-color;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--closed {
     p {
       display: none;
@@ -72,18 +84,6 @@
     border-top: 1px solid $accent-color;
     border-right: 1px solid $accent-color;
     transform: rotate(-45deg)
-  }
-
-  &:focus {
-    outline: 1px dashed $accent-color;
-  }
-
-  &:hover {
-    color: $accent-color;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 

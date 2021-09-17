@@ -6,8 +6,8 @@ import Swiper from '../../node_modules/swiper/swiper-bundle.min.js';
 //Слайдер на главной странице
 if (document.querySelector('.slider')) {
   new Swiper ('.swiper', {
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 30,
 
     pagination: {
@@ -66,15 +66,32 @@ if (document.querySelector('.slider')) {
 
 const CLOSE_CLASS = '_close';
 const OPEN__CLASS = '_open';
+const NON_SCROLLING_BLOCK_CLASS = 'non-scrolling-block';
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerToggle = burgerMenu.querySelector('.burger-menu__toggle');
+const pageBody = document.querySelector('#page-body');
+const burgerFocusElement = burgerMenu.querySelector('#burger-focus-element');
 
 burgerMenu.classList.add(CLOSE_CLASS);
 
 burgerToggle.addEventListener('click', () => {
+  pageBody.classList.toggle(NON_SCROLLING_BLOCK_CLASS);
   burgerMenu.classList.toggle(CLOSE_CLASS);
   burgerMenu.classList.toggle(OPEN__CLASS);
+  if (burgerMenu.classList.contains(OPEN__CLASS)) {
+    pageBody.classList.add(NON_SCROLLING_BLOCK_CLASS);
+  }else {
+    pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
+  }
 });
+
+window.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  if ((e.code === 'Tab') && (!(burgerMenu.contains(document.activeElement)))){
+    e.preventDefault();
+    burgerFocusElement.focus();
+  }
+})
 
 /**
  * Dropout на главной
@@ -225,10 +242,9 @@ const saveFormDataInLocalStorage = () => {
  */
 if (document.querySelector('#modal-view-button')) {
   const OPEN_MODAL_CLASS = '_open';
-  const NON_SCROLLING_BLOCK_CLASS = 'non-scrolling-block';
   const ESCAPE_KEY_CODE = 27;
-  const pageBody = document.querySelector('#page-body');
   const modal = document.querySelector('#modal');
+  const focusField = modal.querySelector('input');
   const closeButton = document.querySelector('#close-modal-button')
   const overlay = document.querySelector('#modal-overlay');
   const modalViewButton = document.querySelector('#modal-view-button');
@@ -238,6 +254,7 @@ if (document.querySelector('#modal-view-button')) {
     saveFormDataInLocalStorage();
     modal.classList.add(OPEN_MODAL_CLASS);
     pageBody.classList.add(NON_SCROLLING_BLOCK_CLASS);
+    focusField.focus();
 
     window.addEventListener('keydown',(evt) => {
       if (evt.keyCode === ESCAPE_KEY_CODE){
@@ -245,6 +262,12 @@ if (document.querySelector('#modal-view-button')) {
         pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
       }
     }, {once: true});
+
+    window.addEventListener('keyup', (e) => {
+      if ((e.code === 'Tab') && (!(modal.contains(document.activeElement)))){
+        focusField.focus();
+      }
+    })
 
     overlay.addEventListener('click', () => {
       modal.classList.remove(OPEN_MODAL_CLASS)

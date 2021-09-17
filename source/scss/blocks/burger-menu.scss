@@ -1,5 +1,4 @@
 @media (max-width: $desktop-width) {
-
   .burger-menu {
     &._close {
       padding: 30px 45px 31px;
@@ -34,18 +33,22 @@
     }
 
     &._open {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 105vh;
       box-sizing: border-box;
       min-height: 127px;
-      padding: 30px 0 0;
+      margin: 0;
+      padding: 30px 45px 31px;
+      background: $accent-color;
+      overflow: auto;
+      z-index: 5;
 
       .burger-menu__menu-wrapper {
-        position: absolute;
-        top: 45px;
-        width: 100%;
-        padding: 10px 45px 75px;
-        background: $accent-color;
-        z-index: 5;
-
         a {
           &:focus {
             outline: 1px dashed $secondary-color;
@@ -54,7 +57,7 @@
       }
 
       .burger-menu__cart {
-        top: 10px;
+        top: 55px;
       }
     }
   }
@@ -77,12 +80,11 @@
       padding: 20px 0;
 
       .burger-menu__menu-wrapper {
-        top: 28px;
-        padding: 10px 15px 45px;
+        padding: 20px 15px 45px;
       }
 
       .burger-menu__cart {
-        top: 10px;
+        top: 37px;
       }
     }
   }

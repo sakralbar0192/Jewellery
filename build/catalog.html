@@ -17,7 +17,7 @@
 <header class="page-header page-header--catalog">
   <section class="page-header__header burger-menu">
     <div class="page-header__logo burger-menu__logo">
-      <a href="index.html">
+      <a href="main.html">
         <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
@@ -28,7 +28,7 @@
         <span class="visually-hidden">Open/close menu</span>
       </button>
       <div class="page-header__search-field-wrapper burger-menu__block">
-        <input type="text" placeholder="Type here to search" id="search-field">
+        <input type="search" placeholder="Type here to search" id="search-field">
         <label for="search-field" class="visually-hidden">Введите поисковый запрос</label>
         <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#icon-search"></use>
@@ -85,14 +85,6 @@
     </div>
   </section>
   <section class="page-header__image-block">
-    <div class="page-header__image-wrapper">
-      <picture>
-        <!-- 1х: 1366px; 2x: 2732px -->
-        <source type="image/webp" srcset="img/catalog-main.webp 1x, img/catalog-main@2x.webp 2x">
-        <!-- 1х: 1366px; 2x: 2732px -->
-        <img src="img/catalog-main.jpg" srcset="img/catalog-main@2x.jpg 2x" alt="Jewellery" width="1366" height="261" loading="lazy">
-      </picture>
-    </div>
     <div class="page-header__image-block-text">
       <p>All jewellery</p>
       <span>Discover picks of fashion's finest trends in our jewellery catalog</span>
@@ -395,7 +387,7 @@
       <div class="subscribe-form__input-wrapper">
         <label>
           <span class="visually-hidden">Введите свой email</span>
-          <input type="email" placeholder="Your E-mail">
+          <input type="email" placeholder="Your E-mail" required="">
         </label>
         <button type="submit">
           <span>Sign Up</span>

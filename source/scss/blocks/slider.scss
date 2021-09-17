@@ -1,5 +1,5 @@
 .slider {
-  margin: 0 auto 117px;
+  margin: 0 auto 107px;
   padding: 0 20px;
 }
 
@@ -9,7 +9,7 @@
 
 @media (max-width: $desktop-width) {
   .slider {
-    margin: 0 0 70px;
+    margin: 0 0 60px;
     padding: 0 45px;
   }
 
@@ -20,7 +20,7 @@
 
 @media (max-width: $tablet-width) {
   .slider {
-    margin: 0 0 55px;
+    margin: 0 0 45px;
     padding: 0 15px;
   }
 
@@ -30,19 +30,6 @@
 
   .slider__wrapper {
     margin: 0 0 15px;
-  }
-
-  .slider__slide {
-    max-width: 130px;
-  }
-
-  .slider__image-wrapper {
-    margin: 0 0 20px;
-
-    img {
-      width: 130px;
-      height: 136px;
-    }
   }
 
   .slider__navigation {
