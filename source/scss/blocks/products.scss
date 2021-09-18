@@ -4,9 +4,8 @@
 
 .products__wrapper {
   @include resetListDefaultProperties;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 900px;
   margin: 0 auto 35px;
 }
@@ -75,6 +74,15 @@
 }
 
 @media (max-width: $desktop-width) {
+  .products__wrapper {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .products__slide {
+    margin: 0 15px 34px;
+  }
+
   .products__navigation {
     width: 88%;
   }
@@ -82,13 +90,17 @@
 
 @media (max-width: $tablet-width) {
   .products__slide {
-    max-width: 130px;
     margin: 0 15px 23px;
   }
 
   .products__wrapper {
-    max-width: 450px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
     margin: 0 auto 22px;
+    padding: 0;
+    max-width: 100%;
   }
 
   .products__navigation {

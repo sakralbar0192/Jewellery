@@ -24,7 +24,7 @@
       </a>
     </div>
     <div class="page-header__nav-wrapper burger-menu__menu-wrapper">
-      <button class="page-header__burger burger-menu__toggle">
+      <button class="page-header__burger burger-menu__toggle" id="burger-focus-element">
         <span class="visually-hidden">Open/close menu</span>
       </button>
       <div class="page-header__search-field-wrapper burger-menu__block">
@@ -85,6 +85,7 @@
     </div>
   </section>
   <section class="page-header__image-block">
+    <div class="page-header__image-block-darkening"></div>
     <div class="page-header__image-block-text">
       <p>All jewellery</p>
       <span>Discover picks of fashion's finest trends in our jewellery catalog</span>
@@ -97,6 +98,7 @@
     <h2 class="visually-hidden">Search filter</h2>
     <button class="filter__togle" id="filter-toggle">Filter</button>
     <div class="filter__wrapper">
+      <div class="filter__overlay" id="filter-overlay"></div>
       <form action="https://echo.htmlacademy.ru/" class="filter__form">
         <button class="filter__close-button" type="button" id="form-close-button">
           <span class="visually-hidden">close</span>

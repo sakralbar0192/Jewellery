@@ -225,12 +225,20 @@
   max-width: 1366px;
   height: 463px;
   margin: auto;
-  background: url('../img/main.jpg') center no-repeat $accent-color;
+  background: url('../img/main.jpg') center no-repeat rgba($additional-color-five, 0.7);
   background-size: cover;
+  z-index: 1;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../img/main@2x.jpg');
   }
+}
+
+.page-header__image-block-darkening {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($additional-color-five, 0.7);
+  z-index: 2;
 }
 
 .page-header__image-block-text {

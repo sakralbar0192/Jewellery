@@ -70,7 +70,7 @@ const NON_SCROLLING_BLOCK_CLASS = 'non-scrolling-block';
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerToggle = burgerMenu.querySelector('.burger-menu__toggle');
 const pageBody = document.querySelector('#page-body');
-const burgerFocusElement = burgerMenu.querySelector('#burger-focus-element');
+const burgerFocusElement = burgerMenu.querySelector('#burger-focus-   element');
 
 burgerMenu.classList.add(CLOSE_CLASS);
 
@@ -80,18 +80,27 @@ burgerToggle.addEventListener('click', () => {
   burgerMenu.classList.toggle(OPEN__CLASS);
   if (burgerMenu.classList.contains(OPEN__CLASS)) {
     pageBody.classList.add(NON_SCROLLING_BLOCK_CLASS);
+
+    window.addEventListener('keyup', (e) => {
+      e.preventDefault();
+      if ((e.code === 'Tab') && (!(burgerMenu.contains(document.activeElement)))){
+        e.preventDefault();
+        burgerFocusElement.focus();
+      }
+    })
   }else {
     pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
+    window.removeEventListener('keyup', (e) => {
+      e.preventDefault();
+      if ((e.code === 'Tab') && (!(burgerMenu.contains(document.activeElement)))){
+        e.preventDefault();
+        burgerFocusElement.focus();
+      }
+    })
   }
 });
 
-window.addEventListener('keyup', (e) => {
-  e.preventDefault();
-  if ((e.code === 'Tab') && (!(burgerMenu.contains(document.activeElement)))){
-    e.preventDefault();
-    burgerFocusElement.focus();
-  }
-})
+
 
 /**
  * Dropout на главной
@@ -200,7 +209,9 @@ if (document.querySelector('.filter-dropout')) {
 if (document.querySelector('#filter')) {
   const CLOSED_FORM_FILTER_CLASS = 'filter--form-closed';
   const OPENED_FORM_FILTER_CLASS = 'filter--form-opened';
+  const ESCAPE_KEY_CODE = 27;
   const filter = document.querySelector('#filter');
+  const overlay = document.querySelector('#filter-overlay');
   const filterToggle = filter.querySelector('#filter-toggle');
   const filterCloseButton = filter.querySelector('#form-close-button');
 
@@ -210,12 +221,30 @@ if (document.querySelector('#filter')) {
     if (filter.classList.contains(OPENED_FORM_FILTER_CLASS)) {
       filter.classList.remove(OPENED_FORM_FILTER_CLASS)
       filter.classList.add(CLOSED_FORM_FILTER_CLASS);
+      pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
     }
   })
 
   filterToggle.addEventListener('click', () => {
-    filter.classList.toggle(CLOSED_FORM_FILTER_CLASS);
-    filter.classList.toggle(OPENED_FORM_FILTER_CLASS);
+    filter.classList.remove(CLOSED_FORM_FILTER_CLASS);
+    filter.classList.add(OPENED_FORM_FILTER_CLASS);
+    pageBody.classList.add(NON_SCROLLING_BLOCK_CLASS);
+
+
+    window.addEventListener('keydown',(evt) => {
+      if (evt.keyCode === ESCAPE_KEY_CODE){
+        filter.classList.remove(OPENED_FORM_FILTER_CLASS);
+        pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
+        filter.classList.add(CLOSED_FORM_FILTER_CLASS);
+      }
+    }, {once: true});
+
+  })
+
+  overlay.addEventListener('click', () => {
+    filter.classList.remove(OPENED_FORM_FILTER_CLASS);
+    pageBody.classList.remove(NON_SCROLLING_BLOCK_CLASS);
+    filter.classList.add(CLOSED_FORM_FILTER_CLASS);
   })
 }
 
@@ -245,8 +274,8 @@ if (document.querySelector('#modal-view-button')) {
   const ESCAPE_KEY_CODE = 27;
   const modal = document.querySelector('#modal');
   const focusField = modal.querySelector('input');
-  const closeButton = document.querySelector('#close-modal-button')
   const overlay = document.querySelector('#modal-overlay');
+  const closeButton = document.querySelector('#close-modal-button');
   const modalViewButton = document.querySelector('#modal-view-button');
 
   modalViewButton.addEventListener('click', (e) => {
@@ -255,6 +284,14 @@ if (document.querySelector('#modal-view-button')) {
     modal.classList.add(OPEN_MODAL_CLASS);
     pageBody.classList.add(NON_SCROLLING_BLOCK_CLASS);
     focusField.focus();
+
+    window.removeEventListener('keyup', (e) => {
+      e.preventDefault();
+      if ((e.code === 'Tab') && (!(burgerMenu.contains(document.activeElement)))){
+        e.preventDefault();
+        burgerFocusElement.focus();
+      }
+    })
 
     window.addEventListener('keydown',(evt) => {
       if (evt.keyCode === ESCAPE_KEY_CODE){

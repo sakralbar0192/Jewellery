@@ -2,6 +2,19 @@
   display: none;
 }
 
+.filter__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000000, 0.5);
+  z-index: 5;
+}
+
 .filter__close-button {
   display: none;
 }
@@ -197,7 +210,7 @@
   .filter {
     width: 100%;
     margin: 0 0 50px;
-    padding: 0 15px;
+    padding: 0 45px;
 
     &--form-closed {
       .filter__togle {
@@ -210,13 +223,27 @@
     }
 
     &--form-opened {
-      position: relative;
+
+      .filter__wrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        overflow: auto;
+      }
+
+      .filter__overlay {
+        display: block;
+      }
 
       .filter__form {
         position: absolute;
-        top: 100px;
+        top: 50px;
         left: 0;
         right: 0;
+        width: 458px;
         margin: auto;
         background: $secondary-color;
         z-index: 10;
@@ -260,7 +287,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 678px;
     width: 100%;
     height: 68px;
     margin: 0 auto;
@@ -348,6 +374,7 @@
 @media (max-width: $tablet-width) {
   .filter {
     margin: 0 0 40px;
+    padding: 0 15px;
 
     &--form-opened {
       .filter__close-button {
